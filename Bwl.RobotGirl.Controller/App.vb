@@ -48,7 +48,7 @@ Public Class App
     End Sub
 
     Private Sub sendMoveCommands_Tick(sender As Object, e As EventArgs) Handles sendMoveCommands.Tick
-        Dim spd = 30
+        Dim spd = TrackBar1.Value
         If _commandsClient.IsConnected Then
             If currentDirection = "f" Then _commandsClient.SendMessage(New NetMessage("S", "MotorCommand", "5", (spd).ToString, (-spd).ToString))
             If currentDirection = "b" Then _commandsClient.SendMessage(New NetMessage("S", "MotorCommand", "5", (-spd).ToString, (spd).ToString))

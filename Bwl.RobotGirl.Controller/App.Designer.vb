@@ -27,7 +27,9 @@ Partial Class App
         Me.bFindRobots = New System.Windows.Forms.Button()
         Me.ListBox1 = New System.Windows.Forms.ListBox()
         Me.sendMoveCommands = New System.Windows.Forms.Timer(Me.components)
+        Me.TrackBar1 = New System.Windows.Forms.TrackBar()
         Me.GroupBox1.SuspendLayout()
+        CType(Me.TrackBar1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'logWriter
@@ -37,6 +39,7 @@ Partial Class App
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.TrackBar1)
         Me.GroupBox1.Controls.Add(Me.bFindRobots)
         Me.GroupBox1.Controls.Add(Me.ListBox1)
         Me.GroupBox1.Location = New System.Drawing.Point(12, 27)
@@ -68,6 +71,15 @@ Partial Class App
         Me.sendMoveCommands.Enabled = True
         Me.sendMoveCommands.Interval = 300
         '
+        'TrackBar1
+        '
+        Me.TrackBar1.Location = New System.Drawing.Point(6, 224)
+        Me.TrackBar1.Maximum = 100
+        Me.TrackBar1.Name = "TrackBar1"
+        Me.TrackBar1.Size = New System.Drawing.Size(185, 45)
+        Me.TrackBar1.TabIndex = 2
+        Me.TrackBar1.Value = 30
+        '
         'App
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -80,6 +92,8 @@ Partial Class App
         Me.Controls.SetChildIndex(Me.logWriter, 0)
         Me.Controls.SetChildIndex(Me.GroupBox1, 0)
         Me.GroupBox1.ResumeLayout(False)
+        Me.GroupBox1.PerformLayout()
+        CType(Me.TrackBar1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -89,4 +103,5 @@ Partial Class App
     Friend WithEvents bFindRobots As Button
     Friend WithEvents ListBox1 As ListBox
     Friend WithEvents sendMoveCommands As Timer
+    Friend WithEvents TrackBar1 As TrackBar
 End Class
