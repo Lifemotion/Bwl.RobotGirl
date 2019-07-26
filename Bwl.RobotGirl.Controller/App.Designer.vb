@@ -24,10 +24,10 @@ Partial Class App
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.TrackBar1 = New System.Windows.Forms.TrackBar()
         Me.bFindRobots = New System.Windows.Forms.Button()
         Me.ListBox1 = New System.Windows.Forms.ListBox()
         Me.sendMoveCommands = New System.Windows.Forms.Timer(Me.components)
-        Me.TrackBar1 = New System.Windows.Forms.TrackBar()
         Me.GroupBox1.SuspendLayout()
         CType(Me.TrackBar1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -48,6 +48,15 @@ Partial Class App
         Me.GroupBox1.TabIndex = 2
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "f"
+        '
+        'TrackBar1
+        '
+        Me.TrackBar1.Location = New System.Drawing.Point(6, 224)
+        Me.TrackBar1.Maximum = 100
+        Me.TrackBar1.Name = "TrackBar1"
+        Me.TrackBar1.Size = New System.Drawing.Size(185, 45)
+        Me.TrackBar1.TabIndex = 2
+        Me.TrackBar1.Value = 30
         '
         'bFindRobots
         '
@@ -70,15 +79,6 @@ Partial Class App
         '
         Me.sendMoveCommands.Enabled = True
         Me.sendMoveCommands.Interval = 300
-        '
-        'TrackBar1
-        '
-        Me.TrackBar1.Location = New System.Drawing.Point(6, 224)
-        Me.TrackBar1.Maximum = 100
-        Me.TrackBar1.Name = "TrackBar1"
-        Me.TrackBar1.Size = New System.Drawing.Size(185, 45)
-        Me.TrackBar1.TabIndex = 2
-        Me.TrackBar1.Value = 30
         '
         'App
         '
